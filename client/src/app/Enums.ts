@@ -1,0 +1,1 @@
+export enum MissoinStatus { DUE, DONE }

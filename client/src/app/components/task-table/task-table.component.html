@@ -1,0 +1,12 @@
+<div>
+    <h1>on time</h1>
+    <p *ngFor='let mission of missions | async | taskDue' >{{mission.title}} - {{mission.due | date}}</p>
+</div>
+<div>
+    <h1>late</h1>
+    <p *ngFor='let mission of missions | async | taskLate' >{{mission.title}} - {{mission.due | date}} <button (click)='SetDone(mission)'>done</button></p>
+</div>
+<div>
+    <h1>done</h1>
+    <p *ngFor='let mission of missions | async | taskDone' >{{mission.title}}</p>
+</div>
